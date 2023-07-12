@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Fonts/Kenney Mini.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Kenney Future.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Menu/Main_menu.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Menu/Stage_2_Playagain.gd" type="Script" id=5]
+[ext_resource path="res://Sound&Music/“Lose”_sound_effect(256k).mp3" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 4 )
+
+[node name="Stage_2_lose" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 320.0
+margin_bottom = 184.0
+color = Color( 0.14902, 0.145098, 0.74902, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 72.0
+margin_top = 16.0
+margin_right = 264.0
+margin_bottom = 66.0
+custom_colors/font_color = Color( 0.843137, 0.929412, 0.0745098, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "YOU LOSE!"
+
+[node name="Main_menu" type="Button" parent="."]
+margin_left = 88.0
+margin_top = 72.0
+margin_right = 240.0
+margin_bottom = 100.0
+custom_colors/font_color = Color( 0.878431, 0.0901961, 0.0901961, 1 )
+custom_colors/font_color_hover = Color( 0.384314, 0.870588, 0.0862745, 1 )
+custom_colors/font_color_pressed = Color( 0.0745098, 0.227451, 0.929412, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Main Menu"
+script = ExtResource( 3 )
+
+[node name="Stage_2_Playagain" type="Button" parent="."]
+margin_left = 96.0
+margin_top = 120.0
+margin_right = 232.0
+margin_bottom = 146.0
+custom_colors/font_color = Color( 0.937255, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_hover = Color( 0.384314, 0.870588, 0.0862745, 1 )
+custom_colors/font_color_pressed = Color( 0.0745098, 0.227451, 0.929412, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Play Again"
+script = ExtResource( 5 )
+
+[node name="lose_soundstage2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="Main_menu" to="Main_menu" method="_on_Main_menu_pressed"]
+[connection signal="pressed" from="Stage_2_Playagain" to="Stage_2_Playagain" method="_on_Stage_2_Playagain_pressed"]

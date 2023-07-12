@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Save_HUD.gd" type="Script" id=1]
+
+[node name="Save_HUD" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="Label2" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0

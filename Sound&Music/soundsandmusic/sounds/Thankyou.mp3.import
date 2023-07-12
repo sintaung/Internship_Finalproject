@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Thankyou.mp3-29abf37cd44b3a4c7f214840d4ae4691.mp3str"
+
+[deps]
+
+source_file="res://Sound&Music/soundsandmusic/sounds/Thankyou.mp3"
+dest_files=[ "res://.import/Thankyou.mp3-29abf37cd44b3a4c7f214840d4ae4691.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,162 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Male_player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ground tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Enemy2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Background/04pavinform256.png" type="Texture" id=4]
+[ext_resource path="res://citizens/One/character_malePerson_idle.png" type="Texture" id=5]
+[ext_resource path="res://citizens/Our_Citizen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://HUD.gd" type="Script" id=8]
+[ext_resource path="res://Sound&Music/soundsandmusic/music/Swinging Pants.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Time_Control.tscn" type="PackedScene" id=10]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0627451, 0.054902, 0.054902, 0.584314 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 7 )
+
+[node name="Stagetwo" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 2
+collision_mask = 49
+format = 1
+tile_data = PoolIntArray( -851968, 1073741838, 0, -851967, 6, 0, -851966, 6, 0, -851965, 6, 0, -851964, 6, 0, -851963, 6, 0, -851962, 6, 0, -851961, 6, 0, -851960, 6, 0, -851959, 6, 0, -851958, 6, 0, -851957, 6, 0, -851956, 6, 0, -851955, 6, 0, -851954, 6, 0, -851953, 6, 0, -851952, 6, 0, -851951, 6, 0, -851950, 6, 0, -851949, 6, 0, -851948, 6, 0, -851947, 6, 0, -851946, 6, 0, -851945, 6, 0, -851944, 6, 0, -851943, 6, 0, -851942, 6, 0, -851941, 6, 0, -851940, 6, 0, -851939, 6, 0, -851938, 6, 0, -851937, 6, 0, -851936, 6, 0, -851935, 6, 0, -851934, 6, 0, -851933, 6, 0, -851932, 6, 0, -851931, 11, 0, -786432, 9, 0, -786429, 10, 0, -786428, 10, 0, -786420, 1073741834, 0, -786412, 1073741834, 0, -786405, 10, 0, -786399, 1073741834, 0, -786395, 11, 0, -720896, 9, 0, -720893, 10, 0, -720892, 10, 0, -720884, 1073741834, 0, -720877, 10, 0, -720876, 10, 0, -720875, 10, 0, -720870, 10, 0, -720864, 10, 0, -720863, 10, 0, -720859, 11, 0, -655360, 9, 0, -655357, 10, 0, -655356, 10, 0, -655348, 1073741834, 0, -655326, 10, 0, -655323, 11, 0, -589824, 9, 0, -589812, 1073741834, 0, -589807, 1073741834, 0, -589800, 1073741834, 0, -589794, 1073741834, 0, -589787, 11, 0, -524288, 9, 0, -524278, 1073741834, 0, -524277, 1073741834, 0, -524276, 1073741834, 0, -524271, 1073741834, 0, -524270, 1073741834, 0, -524269, 1073741834, 0, -524264, 1073741834, 0, -524258, 1073741834, 0, -524251, 11, 0, -458752, 9, 0, -458751, 1073741834, 0, -458750, 1073741834, 0, -458746, 10, 0, -458745, 10, 0, -458736, 1073741834, 0, -458735, 10, 0, -458730, 1073741834, 0, -458729, 1073741834, 0, -458728, 1073741834, 0, -458727, 1073741834, 0, -458726, 1073741834, 0, -458725, 1073741834, 0, -458724, 1073741834, 0, -458723, 1073741834, 0, -458722, 1073741834, 0, -458721, 1073741834, 0, -458720, 1073741834, 0, -458719, 1073741834, 0, -458718, 1073741834, 0, -458715, 11, 0, -393216, 9, 0, -393211, 10, 0, -393210, 10, 0, -393201, 10, 0, -393200, 1073741834, 0, -393199, 10, 0, -393179, 11, 0, -327680, 9, 0, -327675, 10, 0, -327674, 10, 0, -327666, 10, 0, -327665, 10, 0, -327664, 1073741834, 0, -327663, 10, 0, -327643, 11, 0, -262144, 9, 0, -262140, 1073741834, 0, -262139, 1073741834, 0, -262138, 1073741834, 0, -262137, 1073741834, 0, -262136, 1073741834, 0, -262135, 1073741834, 0, -262134, 1073741834, 0, -262133, 1073741834, 0, -262132, 1073741834, 0, -262131, 1073741834, 0, -262130, 1073741834, 0, -262129, 1073741834, 0, -262128, 1073741834, 0, -262127, 1073741834, 0, -262126, 1073741834, 0, -262125, 1073741834, 0, -262124, 1073741834, 0, -262123, 1073741834, 0, -262122, 1073741834, 0, -262121, 1073741834, 0, -262120, 1073741834, 0, -262119, 1073741834, 0, -262118, 1073741834, 0, -262117, 1073741834, 0, -262107, 11, 0, -196608, 9, 0, -196607, 10, 0, -196606, 10, 0, -196605, 10, 0, -196604, 10, 0, -196603, 10, 0, -196602, 10, 0, -196601, 10, 0, -196600, 10, 0, -196599, 10, 0, -196594, 1073741834, 0, -196590, 1073741834, 0, -196586, 1073741834, 0, -196582, 1073741834, 0, -196578, 10, 0, -196577, 10, 0, -196576, 10, 0, -196573, 1073741834, 0, -196572, 1073741834, 0, -196571, 11, 0, -131072, 9, 0, -131051, 10, 0, -131040, 1073741834, 0, -131035, 11, 0, -65536, 9, 0, -65524, 1073741834, 0, -65520, 1073741834, 0, -65516, 1073741834, 0, -65512, 1073741834, 0, -65508, 1073741834, 0, -65504, 1073741834, 0, -65499, 11, 0, 0, 9, 0, 4, 10, 0, 5, 10, 0, 6, 10, 0, 7, 10, 0, 10, 10, 0, 11, 10, 0, 12, 10, 0, 13, 10, 0, 14, 10, 0, 15, 10, 0, 16, 10, 0, 17, 10, 0, 18, 10, 0, 19, 10, 0, 20, 10, 0, 23, 10, 0, 24, 10, 0, 25, 10, 0, 26, 10, 0, 27, 10, 0, 28, 10, 0, 29, 10, 0, 30, 10, 0, 31, 10, 0, 32, 10, 0, 33, 10, 0, 34, 10, 0, 37, 11, 0, 65536, 9, 0, 65541, 10, 0, 65547, 10, 0, 65559, 10, 0, 65573, 11, 0, 131072, 9, 0, 131078, 10, 0, 131082, 10, 0, 131095, 10, 0, 131109, 11, 0, 196608, 9, 0, 196609, 10, 0, 196610, 10, 0, 196615, 10, 0, 196617, 10, 0, 196619, 10, 0, 196620, 10, 0, 196621, 10, 0, 196622, 10, 0, 196623, 10, 0, 196624, 10, 0, 196625, 10, 0, 196626, 10, 0, 196627, 10, 0, 196628, 10, 0, 196629, 10, 0, 196630, 10, 0, 196631, 10, 0, 196632, 10, 0, 196633, 10, 0, 196634, 10, 0, 196635, 10, 0, 196636, 10, 0, 196637, 10, 0, 196638, 10, 0, 196639, 10, 0, 196640, 10, 0, 196643, 10, 0, 196644, 10, 0, 196645, 11, 0, 262144, 9, 0, 262149, 10, 0, 262152, 10, 0, 262162, 10, 0, 262163, 10, 0, 262164, 10, 0, 262165, 10, 0, 262166, 1073741834, 0, 262167, -1610612726, 0, 262168, -1610612726, 0, 262181, 11, 0, 327680, 9, 0, 327687, 10, 0, 327688, 10, 0, 327689, 10, 0, 327698, 10, 0, 327699, 10, 0, 327700, 10, 0, 327701, 10, 0, 327702, 10, 0, 327703, 10, 0, 327704, -1610612726, 0, 327717, 11, 0, 393216, 9, 0, 393220, 10, 0, 393222, 10, 0, 393226, 10, 0, 393229, 10, 0, 393230, 10, 0, 393231, 10, 0, 393232, 10, 0, 393233, 10, 0, 393234, 10, 0, 393235, 10, 0, 393236, 10, 0, 393237, 10, 0, 393238, 10, 0, 393239, 10, 0, 393240, 10, 0, 393241, -1610612726, 0, 393242, 10, 0, 393243, 10, 0, 393244, 10, 0, 393245, 10, 0, 393246, 10, 0, 393249, 10, 0, 393250, 10, 0, 393251, 10, 0, 393252, 10, 0, 393253, 11, 0, 458752, 9, 0, 458755, 10, 0, 458756, 10, 0, 458757, 10, 0, 458789, 11, 0, 524288, 9, 0, 524325, 11, 0, 589824, 9, 0, 589835, 10, 0, 589836, 10, 0, 589855, 10, 0, 589856, 10, 0, 589861, 11, 0, 655360, 9, 0, 655361, 10, 0, 655362, 10, 0, 655363, 10, 0, 655364, 10, 0, 655365, 10, 0, 655366, 10, 0, 655367, 10, 0, 655368, 10, 0, 655369, 10, 0, 655370, 10, 0, 655371, 10, 0, 655372, 10, 0, 655373, 10, 0, 655374, 10, 0, 655375, 10, 0, 655376, 10, 0, 655377, 10, 0, 655378, 10, 0, 655379, 10, 0, 655380, 10, 0, 655381, 10, 0, 655382, 10, 0, 655383, 10, 0, 655384, 10, 0, 655385, 10, 0, 655386, 10, 0, 655387, 10, 0, 655388, 10, 0, 655389, 10, 0, 655390, 10, 0, 655391, 10, 0, 655392, 10, 0, 655393, 10, 0, 655394, 10, 0, 655395, 10, 0, 655396, 10, 0, 655397, 11, 0 )
+
+[node name="Male_player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 33, -127 )
+
+[node name="Control" parent="Male_player" instance=ExtResource( 10 )]
+margin_left = -21.0
+margin_top = -23.0
+margin_right = 23.0
+margin_bottom = -13.0
+
+[node name="HUD" type="CanvasLayer" parent="Male_player"]
+layer = 5
+script = ExtResource( 8 )
+
+[node name="Panel" type="Panel" parent="Male_player/HUD"]
+margin_left = 18.0
+margin_top = 18.0
+margin_right = 85.0
+margin_bottom = 48.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="Male_player/HUD"]
+margin_left = 19.0
+margin_top = 18.0
+margin_right = 35.0
+margin_bottom = 39.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="x" type="Label" parent="Male_player/HUD"]
+margin_left = 36.0
+margin_top = 21.0
+margin_right = 46.0
+margin_bottom = 41.0
+custom_colors/font_color = Color( 0.105882, 0.886275, 0.172549, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "x"
+valign = 1
+
+[node name="citizensNo" type="Label" parent="Male_player/HUD"]
+margin_left = 49.0
+margin_top = 22.0
+margin_right = 78.0
+margin_bottom = 46.0
+custom_colors/font_color = Color( 0.964706, 0.164706, 0.0352941, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "##"
+valign = 1
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="Enemy2nosenser" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( 513, -123 )
+detects_cliffs = false
+
+[node name="Enemy2nosenser2" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( 310, -180 )
+detects_cliffs = false
+
+[node name="Enemy2nosenser3" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( 241, 84 )
+detects_cliffs = false
+
+[node name="Enemy3" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( 338, -77 )
+
+[node name="Enemy4" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( 399, 35 )
+
+[node name="Enemy5" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( 320, 37 )
+
+[node name="our_citizen" type="Node2D" parent="."]
+
+[node name="Our_Citizen" parent="our_citizen" instance=ExtResource( 6 )]
+position = Vector2( 250, -8 )
+collision_layer = 8
+
+[node name="Our_Citizen2" parent="our_citizen" instance=ExtResource( 6 )]
+position = Vector2( 271, 87 )
+collision_layer = 8
+
+[node name="Our_Citizen3" parent="our_citizen" instance=ExtResource( 6 )]
+position = Vector2( 207, 40 )
+collision_layer = 8
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color( 0.0588235, 0.431373, 0.431373, 1 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 114, 141 )
+scale = Vector2( 1.10938, 0.351563 )
+texture = ExtResource( 4 )
+
+[node name="Sprite5" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 302, -105 )
+scale = Vector2( 2.60938, 0.875 )
+texture = ExtResource( 4 )
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 113, 49 )
+scale = Vector2( 1.11719, 0.367188 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 444.5, 142 )
+scale = Vector2( 1.50391, 0.390625 )
+texture = ExtResource( 4 )
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 446, 48 )
+scale = Vector2( 1.48438, 0.375 )
+texture = ExtResource( 4 )
+
+[node name="Screenshake" type="Node2D" parent="."]
+
+[node name="Music_Stwo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -20.0
+autoplay = true
+
+[connection signal="citizen_saved" from="our_citizen/Our_Citizen" to="Male_player/HUD" method="_on_citizen_saved"]
+[connection signal="citizen_saved" from="our_citizen/Our_Citizen2" to="Male_player/HUD" method="_on_citizen_saved"]
+[connection signal="citizen_saved" from="our_citizen/Our_Citizen3" to="Male_player/HUD" method="_on_citizen_saved"]

@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Kenney Blocks.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Menu/Back_menu.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 9
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 10
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[node name="About" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 321.0
+margin_bottom = 180.0
+color = Color( 0.380392, 0.792157, 0.823529, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 3.0
+margin_top = 14.0
+margin_right = 597.0
+margin_bottom = 101.0
+custom_colors/font_color = Color( 0.227451, 0.0980392, 0.886275, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "This is a platformer game project type for the internship of LAP IV 2023. In 
+this game, you have  two characters to play with at different levels. As in the 
+first stage, you have to find the portal  (door) for those citizens (characters) 
+whom you must save after you pass through the portal. That is what you have 
+to do in next stage. Just simple. Thank you for playing. 
+            "
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 46.0
+margin_top = 98.0
+margin_right = 317.0
+margin_bottom = 170.0
+custom_colors/font_color = Color( 0.917647, 0.0627451, 0.0627451, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "            -This game took about six months.
+			            -The supervisor is Sayar Myo Bandar Hlaing Bwar. 
+            -The developer is Sint Aung from the 19th batch.
+            
+            "
+
+[node name="Back_menu" type="Button" parent="."]
+margin_left = 196.0
+margin_top = 145.0
+margin_right = 312.0
+margin_bottom = 175.0
+custom_colors/font_color = Color( 0.756863, 0.921569, 0.0705882, 1 )
+custom_colors/font_color_hover = Color( 0.0823529, 0.0980392, 0.929412, 1 )
+custom_colors/font_color_pressed = Color( 0.239216, 0.780392, 0.835294, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Back Menu"
+script = ExtResource( 3 )
+
+[connection signal="pressed" from="Back_menu" to="Back_menu" method="_on_Back_menu_pressed"]

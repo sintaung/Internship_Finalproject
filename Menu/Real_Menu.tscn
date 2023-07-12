@@ -1,0 +1,360 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Fonts/Kenney Future Narrow.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Menu/trak-painted1.jpg" type="Texture" id=2]
+[ext_resource path="res://Sprite/character_femaleAdventurer_idle.png" type="Texture" id=3]
+[ext_resource path="res://Enemy/slimeBlue_move.png" type="Texture" id=4]
+[ext_resource path="res://Sprite/Male_Chr/character_maleAdventurer_idle.png" type="Texture" id=5]
+[ext_resource path="res://Enemy/alienYellow_stand.png" type="Texture" id=6]
+[ext_resource path="res://Menu/Play_Button.gd" type="Script" id=7]
+[ext_resource path="res://Menu/Exit_Button3.gd" type="Script" id=8]
+[ext_resource path="res://Fonts/Kenney Mini Square Mono.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Sound&Music/soundsandmusic/music/Retro Beat.ogg" type="AudioStream" id=10]
+[ext_resource path="res://citizens/One/character_malePerson_idle.png" type="Texture" id=11]
+[ext_resource path="res://Fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Menu/About_Button2.gd" type="Script" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+outline_size = 2
+outline_color = Color( 0.878431, 0.152941, 0.152941, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.282353, 0.72549, 0.811765, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="DynamicFont" id=3]
+size = 7
+outline_size = 1
+outline_color = Color( 0.2, 0.109804, 0.109804, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0823529, 0.105882, 0.384314, 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 14
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 9 )
+
+[node name="Real_Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 322.0
+margin_bottom = 181.0
+color = Color( 0.498039, 0.666667, 0.352941, 1 )
+
+[node name="Title" type="Label" parent="."]
+margin_left = 55.0
+margin_top = 11.0
+margin_right = 274.0
+margin_bottom = 46.0
+custom_fonts/font = SubResource( 1 )
+text = "Your Mission"
+
+[node name="left_Panel" type="Panel" parent="."]
+margin_left = 5.0
+margin_top = 101.0
+margin_right = 91.0
+margin_bottom = 170.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="left_Panel"]
+margin_left = 3.0
+margin_top = 51.0
+margin_right = 34.0
+margin_bottom = 66.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Spacebar" type="Label" parent="left_Panel/TextureRect"]
+margin_left = 3.0
+margin_top = 4.0
+margin_right = 38.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 3 )
+text = "Space"
+
+[node name="Spacebar2" type="Label" parent="left_Panel/TextureRect"]
+margin_left = 42.0
+margin_top = 5.0
+margin_right = 79.0
+margin_bottom = 17.0
+custom_fonts/font = SubResource( 3 )
+text = "Fireball"
+
+[node name="Spacebar5" type="Label" parent="left_Panel/TextureRect"]
+margin_left = 55.0
+margin_top = -32.0
+margin_right = 92.0
+margin_bottom = -20.0
+custom_fonts/font = SubResource( 3 )
+text = "Move"
+
+[node name="Spacebar6" type="Label" parent="left_Panel/TextureRect"]
+margin_left = 62.0
+margin_top = -24.0
+margin_right = 83.0
+margin_bottom = -15.0
+custom_fonts/font = SubResource( 3 )
+text = "&"
+
+[node name="Spacebar7" type="Label" parent="left_Panel/TextureRect"]
+margin_left = 55.0
+margin_top = -16.0
+margin_right = 76.0
+margin_bottom = -7.0
+custom_fonts/font = SubResource( 3 )
+text = "Jump"
+
+[node name="Spacebar3" type="Label" parent="left_Panel/TextureRect"]
+margin_left = 33.0
+margin_top = 4.0
+margin_right = 70.0
+margin_bottom = 16.0
+custom_colors/font_color = Color( 0.898039, 0.254902, 0.0823529, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "="
+
+[node name="Spacebar4" type="Label" parent="left_Panel/TextureRect"]
+margin_left = 44.0
+margin_top = -20.0
+margin_right = 81.0
+margin_bottom = -6.0
+custom_colors/font_color = Color( 0.898039, 0.254902, 0.0823529, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "="
+
+[node name="TextureRect2" type="TextureRect" parent="left_Panel"]
+margin_left = 19.0
+margin_top = 2.0
+margin_right = 63.0
+margin_bottom = 17.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Spacebar" type="Label" parent="left_Panel/TextureRect2"]
+margin_left = 3.0
+margin_top = 4.0
+margin_right = 42.0
+margin_bottom = 16.0
+custom_colors/font_color = Color( 0.92549, 0.0901961, 0.0901961, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Controls"
+
+[node name="TextureRect3" type="TextureRect" parent="left_Panel"]
+margin_left = 20.0
+margin_top = 22.0
+margin_right = 31.0
+margin_bottom = 33.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Spacebar" type="Label" parent="left_Panel/TextureRect3"]
+margin_left = 3.0
+margin_top = 2.0
+margin_right = 42.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 3 )
+text = "W"
+
+[node name="TextureRect4" type="TextureRect" parent="left_Panel"]
+margin_left = 6.0
+margin_top = 33.0
+margin_right = 17.0
+margin_bottom = 44.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Spacebar" type="Label" parent="left_Panel/TextureRect4"]
+margin_left = 3.0
+margin_top = 2.0
+margin_right = 42.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 3 )
+text = "A"
+
+[node name="TextureRect5" type="TextureRect" parent="left_Panel"]
+margin_left = 34.0
+margin_top = 33.0
+margin_right = 45.0
+margin_bottom = 43.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Spacebar" type="Label" parent="left_Panel/TextureRect5"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 43.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "D"
+
+[node name="Items_panel" type="Panel" parent="."]
+margin_left = 170.0
+margin_top = 50.0
+margin_right = 316.0
+margin_bottom = 171.0
+custom_styles/panel = SubResource( 4 )
+
+[node name="Enemy_10" type="TextureRect" parent="Items_panel"]
+margin_left = 6.0
+margin_top = 54.0
+margin_right = 37.0
+margin_bottom = 80.0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="Spacebar2" type="Label" parent="Items_panel/Enemy_10"]
+margin_left = 66.0
+margin_top = 15.0
+margin_right = 120.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 3 )
+text = "Your Enemies"
+
+[node name="Enemy_1" type="TextureRect" parent="Items_panel/Enemy_10"]
+margin_left = 34.0
+margin_right = 55.0
+margin_bottom = 23.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="equal" type="Label" parent="Items_panel/Enemy_10"]
+margin_left = 56.0
+margin_top = 16.0
+margin_right = 93.0
+margin_bottom = 28.0
+custom_colors/font_color = Color( 0.898039, 0.254902, 0.0823529, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "="
+
+[node name="Citizen" type="TextureRect" parent="Items_panel"]
+margin_left = 110.0
+margin_top = 86.0
+margin_right = 141.0
+margin_bottom = 112.0
+texture = ExtResource( 11 )
+expand = true
+
+[node name="words" type="Label" parent="Items_panel/Citizen"]
+margin_left = -104.0
+margin_top = 8.0
+margin_right = 3.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 0.192157, 0.933333, 0.0627451, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "The ones you have to save"
+
+[node name="words2" type="Label" parent="Items_panel/Citizen"]
+margin_left = -56.0
+margin_top = 16.0
+margin_right = 23.0
+margin_bottom = 34.0
+rect_scale = Vector2( 0.349096, 0.613071 )
+custom_colors/font_color = Color( 0.933333, 0.184314, 0.0627451, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Our Citizens"
+
+[node name="TextureRect2" type="TextureRect" parent="Items_panel"]
+margin_left = 52.0
+margin_top = 3.0
+margin_right = 96.0
+margin_bottom = 18.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Spacebar" type="Label" parent="Items_panel/TextureRect2"]
+margin_left = 9.0
+margin_top = 4.0
+margin_right = 48.0
+margin_bottom = 16.0
+custom_colors/font_color = Color( 0.92549, 0.0901961, 0.0901961, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Items:"
+
+[node name="Cha_1" type="TextureRect" parent="Items_panel"]
+margin_left = 1.0
+margin_top = 28.0
+margin_right = 27.0
+margin_bottom = 48.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Cha_2" type="TextureRect" parent="Items_panel"]
+margin_left = 29.0
+margin_top = 28.0
+margin_right = 53.0
+margin_bottom = 48.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Spacebar5" type="Label" parent="Items_panel"]
+margin_left = 64.0
+margin_top = 33.0
+margin_right = 132.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 3 )
+text = "Your Player"
+
+[node name="Spacebar4" type="Label" parent="Items_panel"]
+margin_left = 57.0
+margin_top = 33.0
+margin_right = 94.0
+margin_bottom = 47.0
+custom_colors/font_color = Color( 0.898039, 0.254902, 0.0823529, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "="
+
+[node name="Play_Button" type="Button" parent="."]
+margin_left = 13.0
+margin_top = 64.0
+margin_right = 72.0
+margin_bottom = 92.0
+custom_colors/font_color = Color( 0.937255, 0.231373, 0.0588235, 1 )
+custom_colors/font_color_hover = Color( 0.192157, 0.909804, 0.054902, 1 )
+custom_colors/font_color_pressed = Color( 0.0588235, 0.0823529, 0.905882, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "Play"
+script = ExtResource( 7 )
+
+[node name="About_Button2" type="Button" parent="."]
+margin_left = 92.0
+margin_top = 64.0
+margin_right = 164.0
+margin_bottom = 92.0
+custom_colors/font_color = Color( 0.937255, 0.231373, 0.0588235, 1 )
+custom_colors/font_color_hover = Color( 0.192157, 0.909804, 0.054902, 1 )
+custom_colors/font_color_pressed = Color( 0.0588235, 0.0823529, 0.905882, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "About"
+script = ExtResource( 13 )
+
+[node name="Exit_Button3" type="Button" parent="."]
+margin_left = 99.0
+margin_top = 107.0
+margin_right = 164.0
+margin_bottom = 135.0
+custom_colors/font_color = Color( 0.882353, 0.0823529, 0.0823529, 1 )
+custom_colors/font_color_hover = Color( 0.192157, 0.909804, 0.054902, 1 )
+custom_colors/font_color_pressed = Color( 0.054902, 0.0235294, 0.886275, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "exit"
+script = ExtResource( 8 )
+
+[node name="Music_titlescreen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -20.0
+autoplay = true
+
+[connection signal="pressed" from="Play_Button" to="Play_Button" method="_on_Play_Button_pressed"]
+[connection signal="pressed" from="About_Button2" to="About_Button2" method="_on_About_Button2_pressed"]
+[connection signal="pressed" from="Exit_Button3" to="Play_Button" method="_on_Exit_Button3_pressed"]

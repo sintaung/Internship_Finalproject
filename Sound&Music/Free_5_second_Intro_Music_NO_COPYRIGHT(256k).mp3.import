@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Free_5_second_Intro_Music_NO_COPYRIGHT(256k).mp3-0df3b58f274deff7ed96d746e7f1d6a2.mp3str"
+
+[deps]
+
+source_file="res://Sound&Music/Free_5_second_Intro_Music_NO_COPYRIGHT(256k).mp3"
+dest_files=[ "res://.import/Free_5_second_Intro_Music_NO_COPYRIGHT(256k).mp3-0df3b58f274deff7ed96d746e7f1d6a2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

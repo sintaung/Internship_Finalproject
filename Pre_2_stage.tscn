@@ -1,0 +1,164 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sound&Music/Free_5_second_Intro_Music_NO_COPYRIGHT(256k).mp3" type="AudioStream" id=2]
+[ext_resource path="res://Pre2control.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 9
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 9
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 9
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 1 )
+
+[node name="Pre_2_stage" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 328.0
+margin_bottom = 200.0
+color = Color( 0.129412, 0.392157, 0.462745, 1 )
+
+[node name="Warning" type="Label" parent="."]
+margin_left = 128.0
+margin_top = 8.0
+margin_right = 213.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0.952941, 0.0745098, 0.0745098, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Warning!"
+
+[node name="note1" type="Label" parent="."]
+margin_top = 96.0
+margin_right = 40.0
+margin_bottom = 111.0
+custom_colors/font_color = Color( 0.952941, 0.0745098, 0.0745098, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Third :"
+
+[node name="note6" type="Label" parent="."]
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 55.0
+custom_colors/font_color = Color( 0.952941, 0.0745098, 0.0745098, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "First :"
+
+[node name="note1_words" type="Label" parent="."]
+margin_left = 38.0
+margin_top = 99.0
+margin_right = 310.0
+margin_bottom = 126.0
+custom_colors/font_color = Color( 0.760784, 0.952941, 0.0745098, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Your firepower is controlled  by the enemy. So you cannot use."
+
+[node name="note1_words2" type="Label" parent="."]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 312.0
+margin_bottom = 55.0
+custom_colors/font_color = Color( 0.760784, 0.952941, 0.0745098, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "The first priority is to protect three citizens from the enemy."
+
+[node name="note2" type="Label" parent="."]
+margin_top = 56.0
+margin_right = 48.0
+margin_bottom = 71.0
+custom_colors/font_color = Color( 0.952941, 0.0745098, 0.0745098, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Second :"
+
+[node name="note2_words" type="Label" parent="."]
+margin_left = 48.0
+margin_top = 56.0
+margin_right = 320.0
+margin_bottom = 98.0
+custom_colors/font_color = Color( 0.760784, 0.952941, 0.0745098, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "You will notice a change in your appearance when you enter their 
+building, but don't worry, you will be back to your original 
+appearance."
+
+[node name="note3" type="Label" parent="."]
+margin_top = 120.0
+margin_right = 307.0
+margin_bottom = 132.0
+custom_colors/font_color = Color( 0.952941, 0.0745098, 0.0745098, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "**Be aware that they have changed form but are still as dangerous as before. "
+
+[node name="note4" type="Label" parent="."]
+margin_left = 88.0
+margin_top = 136.0
+margin_right = 232.0
+margin_bottom = 148.0
+custom_colors/font_color = Color( 0.760784, 0.952941, 0.0745098, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "-You can die with one touch of their body."
+
+[node name="note5" type="Label" parent="."]
+margin_top = 152.0
+margin_right = 48.0
+margin_bottom = 167.0
+custom_colors/font_color = Color( 0.952941, 0.0745098, 0.0745098, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Your strength & Enemy Weakness :"
+
+[node name="note5_words" type="Label" parent="."]
+margin_left = 136.0
+margin_top = 152.0
+margin_right = 280.0
+margin_bottom = 164.0
+custom_colors/font_color = Color( 0.760784, 0.952941, 0.0745098, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "You can press them with the 'W' key, and 
+their weaknesses are still as before."
+
+[node name="Pre2control" type="Control" parent="."]
+margin_left = 32.0
+margin_top = 8.0
+margin_right = 56.0
+margin_bottom = 32.0
+script = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="Pre2control"]
+autostart = true
+
+[node name="Label" type="Label" parent="Pre2control"]
+margin_left = 32.0
+margin_right = 72.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 0.941176, 0.780392, 0.0470588, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+
+[node name="outro5sec" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -25.0
+pitch_scale = 0.8
+autoplay = true
+
+[connection signal="timeout" from="Pre2control/Timer" to="Pre2control" method="_on_Timer_timeout"]

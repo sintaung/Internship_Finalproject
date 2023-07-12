@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/“Lose”_sound_effect(256k).mp3-f1b2bdf4f0f7d9b4e3f2392b345bfeb9.mp3str"
+
+[deps]
+
+source_file="res://Sound&Music/“Lose”_sound_effect(256k).mp3"
+dest_files=[ "res://.import/“Lose”_sound_effect(256k).mp3-f1b2bdf4f0f7d9b4e3f2392b345bfeb9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
